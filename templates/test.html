@@ -1,0 +1,65 @@
+<label for ="data-savarsii-faptei">Data savarsirii faptei</label>
+<input  type ="date" name = "data_savarsirii_faptei" data-date-format="DD MMMM YYYY" class = "form-control" id = "data-savarsii-faptei" aria-describedby="numeHelp" placeholder="Data savarsirii faptei">
+<button onclick="test()">Try</button>
+<p id="demo"></p>
+
+
+
+<select id="JudetePolice">
+   <optgroup label="Judetul Alba">
+       <option>Oras Alba Iulia,Adresa:Str. Andrei Muresanu nr. 2, Alba Iulia
+           Telefon centrala:0258/811.286</option>
+       <option>Oras Aiud,Adresa:Str. Transilvaniei nr. 2, Aiud Telefon centrală:0258/861.101</option>
+       <option>Oras Sebes,Adresa:Str. Traian nr. 1, Sebeş Telefon centrală:0258/731.606</option>
+       <option>Oras Blaj,Adresa:Str. Republicii nr. 28, Blaj Telefon centrală:0258/710.127</option>
+   </optgroup>
+
+    <optgroup label="Arad">
+        <option>Oras Arad,Adresa:Str. Varful cu Dor, nr. 17-19, AradCod:310085,Tel cabinet:0257/20.71.08</option>
+    </optgroup>
+    <optgroup label="Arges">
+        <option>Orasul Pitesti,Adresa:Piteşti, Str. Războieni nr. 3, jud. ArgesTelefon centrală:0248/21.60.99</option>
+        <option>Orasul Campulung,Adresa:Campulung, Str. Matei Basarab, nr. 68, jud. Arges,Telefon cabinet și O.S.:0248/512.100</option>
+        <option>Oras Curtea de Arges,Adresa:Curtea de Arges, Str. 1 Decembrie 1918, nr. 1,Telefon O.S.:0248/721.519</option>
+    </optgroup>
+    <optgroup label="Bacau">
+        <option>Orasul Bacau,Adresa:Str. Spiru Haret nr. 7, Bacău,Telefon centrală:0234/13.72.47CTel cabinet:0234/20.20.00</option>
+        <option>Orasul Moinesti,Adresa:Str. Mihail Sadoveanu nr. 1, Moineşti,Telefon centrală:0234/362222</option>
+        <option>Orasul Onesti,Adresa:Str. Tineretului nr. 2, Oneşti,Telefon centrală::0234/312222</option>
+    </optgroup>
+
+</select>
+
+
+<script>
+
+
+var show = document.getElementById('demo');
+function test(){
+    var date = document.getElementById('data-savarsii-faptei').value;
+    var inpDate = new Date(date);
+    var today = new Date();
+    var currDay = new Date (today.getFullYear(), today.getMonth(), today.getDate());
+    var data_curenta = today.getFullYear()+' '+today.getMonth()+' '+today.getDate();
+    var x = parseInt(data_curenta);
+    var int_date = parseInt(date);
+    console.log(int_date);
+
+}
+
+function testaddOption(){
+    let contor = document.getElementById("JudetePolice").value;
+    if (contor === "Alba"){
+        //var select = document.createElement("select")
+        var option = document.createElement("optgroup")
+        //option.text = "Politie Sebes";
+        option.text = "Politie Sibot";
+        contor.add(option);
+
+    }
+
+}
+
+
+</script>
+															
